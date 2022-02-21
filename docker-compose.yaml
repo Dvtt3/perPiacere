@@ -1,0 +1,29 @@
+version: '3'
+services:
+  alpha:
+    container_name: alpha
+    hostname: alpha
+    build:
+      context: ./alpha
+      dockerfile: Dockerfile
+    # volumes:
+    #  - /alpha/:/var/www/html/
+    ports:
+      - 8000:80
+  maria:
+    container_name: maria
+    restart: always
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: matte
+      MYSQL_PASSWORD: matte
+      MYSQL_DATABASE: user
+    #build:
+    #  context: ./mariaDb
+    #  dockerfile: Dockerfile
+    volumes:
+      - './mariaDb/data/:/var/lib/mysql'
+      - './mariaDb/createTable.sql:/createTable.sql'
+    ports:
+      - 3306:3306

@@ -1,0 +1,6 @@
+FROM mariadb:latest
+ENV MYSQL_ROOT_PASSWORD=root
+ENV MYSQL_USER=cere
+ENV MYSQL_PASSWORD=cere
+EXPOSE 3306
+#RUN mariadb
