@@ -3,7 +3,6 @@
     include("php/gOauthConf.php");
 
     $login_button="";
-
     if(isset($_GET["code"])){
 
       $token = $client->fetchAccessTokenWithAuthCode($_GET["code"]);
@@ -144,7 +143,7 @@
                                              <a class='nav-link color-grey-hover' href='#'>Shop</a>
                                           </li>
                                           <li class='nav-item active'>
-                                             <a class='nav-link color-grey-hover' href='#'>Login/Register</a>
+                                             <a class='nav-link color-grey-hover' href='Register.html'>Login/Register</a>
                                           </li>
                                        </ul>
                                     </div>

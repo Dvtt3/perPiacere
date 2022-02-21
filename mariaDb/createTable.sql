@@ -1,13 +1,15 @@
-DROP DATABASE IF EXISTS userData;
+DROP DATABASE IF EXISTS mylittlejewels;
 
-CREATE DATABASE userData;
+CREATE DATABASE mylittlejewels;
 
-USE userData;
+USE mylittlejewels;
 
-CREATE TABLE AccessData (
+CREATE TABLE users (
     id INT NOT NULL AUTO_INCREMENT,
-    ip TEXT NOT NULL,
-    accessDate DATE NOT NULL,
-    accessFrom INT NOT NULL,
+    Nome VARCHAR(30) NOT NULL,
+    Cognome VARCHAR(30) NOT NULL,
+    Email VARCHAR(50) NOT NULL,
+    Telefono VARCHAR(20) NOT NULL,
+    Password VARCHAR(100) NOT NULL,
     PRIMARY KEY ( id )
 );

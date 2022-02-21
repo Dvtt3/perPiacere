@@ -56,7 +56,7 @@ if($pswd == $pswdConfirm){
 
                 if($results == TRUE){
 
-                    echo("gg");
+                    echo("User succesfully added!");
 
                 }else{
 

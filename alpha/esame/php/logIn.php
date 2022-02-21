@@ -30,9 +30,7 @@
 
         if( $exist == true){
 
-            echo("logged succesfully");
-            echo($email);
-            echo($pswd);
+            echo("logged succesfully: ".$email);
 
         }else{
 
