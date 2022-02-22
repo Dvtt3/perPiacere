@@ -1,1 +1,2 @@
-./mariaDb/data
+mariaDb/data
+.venv
